@@ -117,7 +117,7 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
       <div class="bh"><b>এখন আবেদন চলছে</b><span>হালনাগাদ: ২১ নভেম্বর ২০২৬</span></div>
       <p class="sum" id="sum"></p>
       <ol id="list"></ol>
-      <p class="ex">তথ্য প্রকাশিত নিয়োগ বিজ্ঞপ্তি থেকে নেওয়া। আবেদনের আগে অফিসিয়াল সার্কুলার মিলিয়ে নিও।</p>
+      <p class="ex">শুধু জাতীয় দৈনিকে প্রকাশিত ও যাচাই করা সার্কুলার। আবেদনের আগে অফিসিয়াল বিজ্ঞপ্তি মিলিয়ে নিও।</p>
     </div>
   </section>
 </div>
@@ -127,8 +127,8 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
     <h2>প্রতিযোগিতা কতটা কঠিন, সংখ্যায় দেখো</h2>
     <div class="stats">
       <div><b>৫১৩ জন</b><p>প্রাইভেট চাকরিতে গড়ে প্রতিটা পদে এতজন আবেদন করছে</p><small><a href="https://en.prothomalo.com/youth/employment/snqz3e2d3j" target="_blank" rel="noopener">বিডিজবস, জানুয়ারি–জুন ২০২৬ (প্রথম আলো)</a></small></div>
-      <div><b>২,৯০,০০০+</b><p>প্রার্থী ৫০তম বিসিএসে, পদ মাত্র ২,১৫০টি</p><small><a href="https://today.thefinancialexpress.com.bd/print/are-our-youths-preparing-for-the-wrong-future-1778340199" target="_blank" rel="noopener">দ্য ফিন্যান্সিয়াল এক্সপ্রেস, মে ২০২৬</a></small></div>
-      <div><b>প্রায় ৯ লাখ</b><p>স্নাতক এখনো বেকার, জাতীয় হারের প্রায় তিন গুণ</p><small><a href="https://online-d11.thedailystar.net/supplements-0/news/bangladesh-doesnt-have-job-crisis-it-has-matching-crisis-4115356" target="_blank" rel="noopener">বিবিএস শ্রমশক্তি জরিপ (দ্য ডেইলি স্টার)</a></small></div>
+      <div><b>২,৯০,৯৫১ জন</b><p>আবেদন করেছিল ৫০তম বিসিএসে, পদ মাত্র ২,১৫০টি</p><small><a href="https://www.prothomalo.com/chakri/chakri-news/d1dxkh6pmb" target="_blank" rel="noopener">পিএসসি (প্রথম আলো)</a> · <a href="https://bangla.bdnews24.com/bangladesh/e72f95b8172c" target="_blank" rel="noopener">বিডিনিউজ২৪</a></small></div>
+      <div><b>৮ লাখ ৮৫ হাজার</b><p>স্নাতক বেকার ছিল ২০২৪ সালে, ২০১৭ সালের দ্বিগুণেরও বেশি</p><small><a href="https://en.prothomalo.com/youth/employment/snqz3e2d3j" target="_blank" rel="noopener">বিবিএস জরিপ (প্রথম আলো)</a></small></div>
     </div>
   </div>
 </section>
@@ -209,14 +209,11 @@ const META_PIXEL_ID = "";   // optional: your Meta Pixel ID
 // =====================================================================================
 const f=document.getElementById('f'), err=document.getElementById('err');
 // ---- live circular board (update this list every week) ----
-const JOBS=[
- {o:'কর অঞ্চল-১৯, ঢাকা',p:60,d:'2026-11-21T16:00:00+06:00',u:'https://tax19.teletalk.com.bd/tax19_2026'},
- {o:'হিসাব মহানিয়ন্ত্রকের কার্যালয় (সিজিএ)',p:347,d:'2026-11-25T17:00:00+06:00',u:'http://cga.teletalk.com.bd'},
- {o:'জামালপুর জেলা প্রশাসকের কার্যালয়',p:67,d:'2026-11-25T16:00:00+06:00',u:'https://www.jagonews24.com/jago-jobs/news/1179483'},
- {o:'বিপিএসসি নন-ক্যাডার (সাব-রেজিস্ট্রারসহ)',p:147,d:'2026-11-30T18:00:00+06:00',u:'http://bpsc.teletalk.com.bd'},
- {o:'প্রতিরক্ষা মন্ত্রণালয়',p:10,d:'2026-12-05T17:00:00+06:00',u:'https://bdgovtnotice.com/ministry-of-defence-job-circular/'},
- {o:'চট্টগ্রাম বন্দর কর্তৃপক্ষ',p:393,d:'2026-12-08T23:59:00+06:00',u:'https://cpadigital.gov.bd/jobs'},
- {o:'পপি (এনজিও)',p:480,d:'2026-11-19T23:59:00+06:00',u:'https://bdgovtnotice.com/popi-ngo-job-circular/'}
+const JOBS=[ // only circulars confirmed by a national newspaper; s = source shown on the page
+ {o:'মহা-হিসাব নিরীক্ষক ও নিয়ন্ত্রকের (সিএজি) কার্যালয়',p:347,d:'2026-11-25T16:00:00+06:00',s:'প্রথম আলো',u:'https://www.prothomalo.com/chakri/jwk9zz23s3'},
+ {o:'জামালপুর জেলা প্রশাসকের কার্যালয়',p:67,d:'2026-11-25T16:00:00+06:00',s:'জাগো নিউজ',u:'https://www.jagonews24.com/jago-jobs/news/1179483'},
+ {o:'বিপিএসসি নন-ক্যাডার (সাব-রেজিস্ট্রারসহ)',p:147,d:'2026-11-30T18:00:00+06:00',s:'যুগান্তর',u:'https://www.jugantor.com/job-seek/1179247'},
+ {o:'চট্টগ্রাম বন্দর কর্তৃপক্ষ',p:393,d:'2026-12-08T23:59:00+06:00',s:'যুগান্তর, বাংলা ট্রিবিউন',u:'https://www.jugantor.com/job-seek/1175186'}
 ];
 const BN_MON=['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
 const bnum=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
@@ -231,7 +228,7 @@ function drawJobs(){
       if(j.ms<=10*864e5) soon+=j.p;
       if(h<48){ cls='hot'; left='আর '+bnum(h)+':'+bnum(String(m).padStart(2,'0'))+':'+bnum(String(s).padStart(2,'0')); }
       else left=bnum(Math.ceil(j.ms/864e5))+' দিন বাকি'; }
-    return `<li class="${cls}"><a href="${j.u}" target="_blank" rel="noopener">${j.o}</a><span class="meta">${bnum(j.p.toLocaleString('en-IN'))} পদ · শেষ ${fmtD(j.d)}</span><span class="left">${left}</span></li>`;
+    return `<li class="${cls}"><a href="${j.u}" target="_blank" rel="noopener">${j.o}</a><span class="meta">${bnum(j.p.toLocaleString('en-IN'))} পদ · শেষ ${fmtD(j.d)} · সূত্র: ${j.s}</span><span class="left">${left}</span></li>`;
   }).join('');
   const gone=rows.filter(j=>j.ms<=0).reduce((a,j)=>a+j.p,0);
   document.getElementById('sum').textContent = soon ? `আগামী ১০ দিনে ${bnum(soon.toLocaleString('en-IN'))}টি পদের আবেদন বন্ধ হয়ে যাচ্ছে।` + (gone?` মাত্র কদিন আগে শেষ হয়ে গেছে আরও ${bnum(gone)}টি পদের আবেদন।`:'') : 'নতুন সার্কুলারের তালিকা শিগগিরই হালনাগাদ হবে।';
