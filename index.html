@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>চাকরিবন্ধু | কোনো সার্কুলার আর মিস হবে না</title>
+<meta name="description" content="তোমার ডিগ্রি আর জেলার সাথে মিলিয়ে সরকারি, ব্যাংক ও প্রাইভেট চাকরির সার্কুলার হোয়াটসঅ্যাপে, ডেডলাইনের আগে রিমাইন্ডার, আর বাংলা থেকে ইংরেজি সিভি। ১ মিনিটের সার্ভে দাও।">
+<meta property="og:title" content="চাকরিবন্ধু: কোনো সার্কুলার আর মিস হবে না">
+<meta property="og:description" content="তোমার যোগ্যতার সাথে মেলা সার্কুলার হোয়াটসঅ্যাপে, ডেডলাইনের আগে মনে করিয়ে দেওয়া, আর ঝকঝকে ইংরেজি সিভি। ১ মিনিটের ফ্রি সার্ভে।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<style>
+/* VOICE an older sibling who already got the job: practical, calm, no false promises
+   IDEA the job hunt is a mess of scattered notices; this is one tidy phone message
+   PICTURE a WhatsApp-style alert card with a matched circular and a deadline chip
+   COLOUR bottle green and paper, one urgent red for deadlines
+   TYPE Hind Siliguri throughout
+   LAYOUT one column on phones; two columns from 900px */
+:root{--bg:#f7f8f4;--ink:#132a1f;--green:#0f6b4b;--green2:#e3f1ea;--red:#c2410c;--muted:#52615a;--line:#dde5df;--card:#fff;--ok:#047857;color-scheme:light}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Hind Siliguri",system-ui,sans-serif;overflow-x:clip}
+.wrap{max-width:1100px;margin:0 auto;padding:0 max(5vw,18px)}
+.band{padding:clamp(34px,6vw,72px) 0}.band.alt{background:#fff}
+h1,h2,h3{margin:0;line-height:1.25;text-wrap:balance;font-weight:700}
+h1{font-size:clamp(32px,6vw,52px)}h2{font-size:clamp(26px,4vw,36px)}h3{font-size:20px}
+p{margin:0}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:700;font-size:20px;display:flex;gap:8px;align-items:center}
+.logo i{width:32px;height:32px;border-radius:10px;background:var(--green);color:#fff;display:grid;place-items:center;font-style:normal}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:10px 22px;border-radius:14px;border:2px solid var(--green);background:var(--green);color:#fff;
+  font:700 18px "Hind Siliguri",sans-serif;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--green);min-height:44px;padding:6px 16px;font-size:16px}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center;padding:8px 0 46px}
+.u{color:var(--green)}
+.lead{font-size:clamp(18px,2.3vw,21px);color:var(--muted);margin-top:14px}
+.ctas{margin-top:22px}
+.fine{font-size:14px;color:var(--muted)}
+/* phone alert mock */
+.phone{max-width:380px;margin:0 auto;background:#e9e2d6;border-radius:26px;padding:14px;box-shadow:0 30px 60px -28px rgba(19,42,31,.45);border:8px solid #1c2a24}
+.chathead{display:flex;gap:10px;align-items:center;background:var(--green);color:#fff;margin:-14px -14px 12px;padding:10px 14px;border-radius:18px 18px 0 0;font-weight:700}
+.chathead i{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--green);display:grid;place-items:center;font-style:normal}
+.msg{background:#fff;border-radius:4px 14px 14px 14px;padding:12px 14px;margin-bottom:10px;font-size:15.5px;line-height:1.55;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.msg b{display:block;font-size:16px}
+.chip{display:inline-block;background:#ffedd5;color:var(--red);font-weight:700;border-radius:999px;padding:1px 10px;font-size:14px;margin-top:6px}
+.match{display:inline-block;background:var(--green2);color:var(--green);font-weight:700;border-radius:999px;padding:1px 10px;font-size:14px;margin:6px 6px 0 0}
+.ex{font-size:12px;color:#6b6457;text-align:center;margin-top:2px}
+.grid3{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card b{display:block;font-size:21px;margin-bottom:4px}
+.card p{color:var(--muted)}
+.survey{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
+.why{background:var(--green);color:#fff;border-radius:20px;padding:24px}
+.why ul{margin:14px 0 0;padding-left:20px}.why li{margin:6px 0}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:16px}
+input,select{font:17px "Hind Siliguri",sans-serif;padding:11px 14px;border-radius:12px;border:1.5px solid #c9d4cd;background:#fff;color:var(--ink);min-height:50px;width:100%}
+fieldset{border:0;padding:0;margin:0}legend{font-weight:700;font-size:16px;margin-bottom:6px}
+.opts{display:grid;gap:8px}
+.opts label{display:flex;gap:10px;align-items:center;font-weight:500;border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;cursor:pointer}
+.opts input{width:20px;height:20px;min-height:0;accent-color:var(--green);flex:none}
+.err{color:var(--red);font-weight:700;min-height:1em;font-size:15px}
+.done{display:none;text-align:center;padding:10px}.done b{display:block;font-size:26px;color:var(--ok);margin-bottom:6px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+"}details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:8px}
+footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(min-width:720px){.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:900px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:46px;padding:24px 0 64px}.survey{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="logo"><i>চ</i>চাকরিবন্ধু</div><a class="btn ghost" href="#survey">সার্ভে দাও</a></header>
+  <section class="hero">
+    <div>
+      <h1>চাকরির সার্কুলার <span class="u">আর মিস হবে না।</span></h1>
+      <p class="lead">তোমার ডিগ্রি, বয়স আর জেলার সাথে মেলে এমন সরকারি, ব্যাংক আর প্রাইভেট চাকরির খবর সরাসরি হোয়াটসঅ্যাপে। আবেদনের শেষ তারিখের আগে রিমাইন্ডার। আর বাংলায় তথ্য দিলেই গোছানো ইংরেজি সিভি।</p>
+      <div class="ctas"><a class="btn" href="#survey">১ মিনিটের সার্ভে দাও</a></div>
+      <p class="fine" style="margin-top:12px">একদম ফ্রি, কোনো পেমেন্ট নেই। আমরা এখনো বানাচ্ছি। তোমার উত্তর দেখে ঠিক করব কী বানাব।</p>
+    </div>
+    <div>
+      <div class="phone" aria-label="হোয়াটসঅ্যাপ অ্যালার্টের নমুনা">
+        <div class="chathead"><i>চ</i>চাকরিবন্ধু</div>
+        <div class="msg"><b>🔔 তোমার জন্য নতুন সার্কুলার</b>পদ: অফিস সহকারী (সরকারি দপ্তর)<br>যোগ্যতা: স্নাতক · বয়স: ১৮–৩২<br><span class="match">✓ তোমার ডিগ্রির সাথে মেলে</span><span class="match">✓ তোমার জেলা</span><br><span class="chip">শেষ তারিখ: ৫ দিন বাকি</span></div>
+        <div class="msg"><b>⏰ রিমাইন্ডার</b>কাল আবেদনের শেষ দিন। এখনো আবেদন করোনি।</div>
+      </div>
+      <p class="ex">নমুনা বার্তা, কোনো আসল সার্কুলার নয়</p>
+    </div>
+  </section>
+</div>
+
+<section class="band alt">
+  <div class="wrap">
+    <h2>চাকরি খোঁজা কেন এত কঠিন?</h2>
+    <div class="grid3">
+      <div class="card"><b>সার্কুলার ছড়িয়ে-ছিটিয়ে</b><p>পত্রিকা, ওয়েবসাইট, ফেসবুক পেজ। রোজ সব দেখা সম্ভব না, আর ভালো সার্কুলারটাই চোখ এড়িয়ে যায়।</p></div>
+      <div class="card"><b>ডেডলাইন পার হয়ে যায়</b><p>"পরে করব" ভেবে রেখে দিলে, পরে দেখি আবেদনের তারিখ শেষ।</p></div>
+      <div class="card"><b>একটা পদে শত শত আবেদন</b><p>প্রাইভেট চাকরিতে সিভি দেখেই বাদ। ইংরেজিতে গোছানো সিভি না থাকলে ইন্টারভিউ ডাকই আসে না।</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="survey">
+  <div class="wrap survey">
+    <div class="why">
+      <h3 style="font-size:24px">কেন সার্ভে দেবে?</h3>
+      <ul><li>তোমার উত্তর দেখে ঠিক করব আগে কোনটা বানাব</li><li>চালু হলে প্রথম মাস ফ্রি ব্যবহার করতে পারবে</li><li>কোনো টাকা লাগবে না, কোনো পেমেন্ট নেই</li><li>নম্বর শুধু এই সার্ভিসের খবর দিতে ব্যবহার হবে</li></ul>
+    </div>
+    <form id="f" novalidate>
+      <h3 style="font-size:24px">১ মিনিটের সার্ভে</h3>
+      <label>হোয়াটসঅ্যাপ নম্বর অথবা ইমেইল<input name="contact" required inputmode="email" placeholder="01XXXXXXXXX বা you@email.com"></label>
+      <label>তোমার সর্বোচ্চ পড়াশোনা<select name="education"><option value="">বেছে নাও…</option><option>এইচএসসি</option><option>ডিপ্লোমা</option><option>অনার্স/ডিগ্রি (পড়ছি)</option><option>অনার্স/ডিগ্রি (শেষ)</option><option>মাস্টার্স</option></select></label>
+      <fieldset><legend>কোন ধরনের চাকরি চাও? (একাধিক বাছতে পারো)</legend><div class="opts">
+        <label><input type="checkbox" name="jobtype" value="govt"> সরকারি চাকরি / বিসিএস</label>
+        <label><input type="checkbox" name="jobtype" value="bank"> ব্যাংক</label>
+        <label><input type="checkbox" name="jobtype" value="private"> প্রাইভেট কোম্পানি</label>
+        <label><input type="checkbox" name="jobtype" value="ngo"> এনজিও</label>
+        <label><input type="checkbox" name="jobtype" value="abroad"> বিদেশে চাকরি</label></div></fieldset>
+      <fieldset><legend>সবচেয়ে বড় সমস্যা কোনটা?</legend><div class="opts">
+        <label><input type="radio" name="pain" value="missing-circulars"> ঠিক সময়ে সার্কুলার খুঁজে পাই না / মিস হয়ে যায়</label>
+        <label><input type="radio" name="pain" value="cv"> ভালো সিভি/কভার লেটার বানাতে পারি না</label>
+        <label><input type="radio" name="pain" value="exam-prep"> লিখিত/এমসিকিউ পরীক্ষার প্রস্তুতি</label>
+        <label><input type="radio" name="pain" value="interview"> ইন্টারভিউতে ভয় / কী বলব বুঝি না</label>
+        <label><input type="radio" name="pain" value="experience"> সবাই অভিজ্ঞতা চায়, আমার নেই</label></div></fieldset>
+      <fieldset><legend>কোনটা পেলে সবচেয়ে উপকার হবে? (একাধিক বাছতে পারো)</legend><div class="opts">
+        <label><input type="checkbox" name="want" value="alerts"> যোগ্যতা মিলিয়ে হোয়াটসঅ্যাপে সার্কুলার</label>
+        <label><input type="checkbox" name="want" value="reminders"> শেষ তারিখের আগে রিমাইন্ডার</label>
+        <label><input type="checkbox" name="want" value="english-cv"> বাংলায় তথ্য দিলে ইংরেজি সিভি</label>
+        <label><input type="checkbox" name="want" value="cover-letter"> প্রতিটা চাকরির জন্য আলাদা কভার লেটার</label>
+        <label><input type="checkbox" name="want" value="interview-practice"> ইন্টারভিউ প্র্যাকটিস প্রশ্ন</label></div></fieldset>
+      <fieldset><legend>এমন সার্ভিসের জন্য মাসে কত দিতে রাজি?</legend><div class="opts">
+        <label><input type="radio" name="price" value="free-only"> শুধু ফ্রি হলে নেব</label>
+        <label><input type="radio" name="price" value="30"> ৩০ টাকা</label>
+        <label><input type="radio" name="price" value="50"> ৫০ টাকা</label>
+        <label><input type="radio" name="price" value="100"> ১০০ টাকা</label>
+        <label><input type="radio" name="price" value="200+"> ২০০ টাকা বা বেশি</label></div></fieldset>
+      <label>তোমার জেলা (ইচ্ছা হলে)<input name="district" placeholder="যেমন: সিলেট"></label>
+      <input type="hidden" name="source" value="">
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" type="submit" id="go">সার্ভে জমা দাও</button>
+      <div class="done" id="done"><b>ধন্যবাদ! ✓</b><p>তোমার উত্তর জমা হয়েছে। সার্ভিস চালু হলে সবার আগে তোমাকে জানাব।</p></div>
+    </form>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap" style="max-width:800px">
+    <h2>প্রশ্ন</h2>
+    <details><summary>এর জন্য কি টাকা লাগবে?</summary><p>না। সার্ভে একদম ফ্রি, কোনো পেমেন্ট নেই। দামের প্রশ্নটা শুধু ভবিষ্যতে ন্যায্য দাম ঠিক করার জন্য।</p></details>
+    <details><summary>তোমরা কি চাকরি দাও?</summary><p>না। আমরা চাকরি দিই না, চাকরির নিশ্চয়তাও দিই না। আমরা শুধু প্রকাশিত সার্কুলার খুঁজে তোমার যোগ্যতার সাথে মিলিয়ে জানাই, আর আবেদন গোছাতে সাহায্য করি।</p></details>
+    <details><summary>সার্কুলার কোথা থেকে আসবে?</summary><p>সরকারি ও প্রতিষ্ঠানের অফিশিয়াল ওয়েবসাইট আর পত্রিকায় প্রকাশিত বিজ্ঞপ্তি থেকে। প্রতিটা বার্তায় অফিশিয়াল লিংক থাকবে, যাতে তুমি নিজে যাচাই করে আবেদন করতে পারো।</p></details>
+    <details><summary>আমার নম্বর কি কাউকে দেওয়া হবে?</summary><p>না। তোমার নম্বর/ইমেইল শুধু এই সার্ভিসের খবর জানাতে ব্যবহার হবে।</p></details>
+  </div>
+</section>
+
+<div class="wrap"><footer>চাকরিবন্ধু · যোগাযোগ: info@monemshariar.com</footer></div>
+
+<script>
+{
+// ===== Setting: paste your Google Apps Script web-app link (or a Formspree link) =====
+const FORM_ENDPOINT = "";
+const META_PIXEL_ID = "";   // optional: your Meta Pixel ID
+// =====================================================================================
+const f=document.getElementById('f'), err=document.getElementById('err');
+const q=new URLSearchParams(location.search);
+f.source.value=[q.get('utm_source'),q.get('utm_campaign'),q.get('utm_content')].filter(Boolean).join(' / ')||document.referrer||'direct';
+if(META_PIXEL_ID){ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init',META_PIXEL_ID); fbq('track','PageView'); }
+f.addEventListener('submit',async e=>{ e.preventDefault(); err.textContent='';
+  const fd=new FormData(f), data=Object.fromEntries(fd); data.jobtype=fd.getAll('jobtype').join(', '); data.want=fd.getAll('want').join(', '); data.page='chakribondhu'; data.time=new Date().toISOString();
+  const c=(data.contact||'').trim();
+  if(!/^(\+?88)?01[3-9]\d{8}$/.test(c.replace(/[\s-]/g,'')) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c)){ err.textContent='সঠিক মোবাইল নম্বর (01XXXXXXXXX) বা ইমেইল দাও।'; f.contact.focus(); return; }
+  if(!FORM_ENDPOINT){ err.textContent='সার্ভে খুব শিগগিরই চালু হবে। দয়া করে একটু পরে আবার চেষ্টা করো।'; return; }
+  const btn=document.getElementById('go'); btn.disabled=true; btn.textContent='জমা হচ্ছে…';
+  try{
+    if(FORM_ENDPOINT.includes('script.google.com')) await fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});
+    else { const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}); if(!r.ok) throw 0; }
+    [...f.children].forEach(x=>{ if(x.id!=='done') x.style.display='none'; }); document.getElementById('done').style.display='block'; try{ if(window.fbq) fbq('track','Lead'); }catch(_){}
+  }catch(x){ err.textContent='কিছু একটা সমস্যা হয়েছে। আবার চেষ্টা করো।'; btn.disabled=false; btn.textContent='সার্ভে জমা দাও'; } });
+}
+</script>
+</body>
+</html>
