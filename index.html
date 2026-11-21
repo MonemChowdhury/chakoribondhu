@@ -99,6 +99,21 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
 @media(min-width:720px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:720px){.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:900px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:46px;padding:24px 0 64px}.survey{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+.side{display:grid;gap:22px}
+.phonecap{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+.phone .t{font-size:11.5px;color:#8a8f8c;text-align:right;margin-top:4px}
+.file{display:flex;gap:10px;align-items:center;background:#f3f6f4;border-radius:10px;padding:8px 10px;margin-top:8px;font-weight:700;font-size:14.5px}
+.file svg{flex:none}
+.ic{width:52px;height:52px;border-radius:14px;background:var(--green2);display:grid;place-items:center;margin-bottom:14px}
+.ic.r{background:#fff1e8}
+.odds{margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,.14);display:grid;gap:22px;align-items:center}
+.odds h3{font-size:clamp(22px,3vw,28px);color:#fff}.odds h3 em{font-style:normal;color:#fdba74}
+.odds p{color:#dbe7e0;margin-top:8px}
+.dots{display:grid;grid-template-columns:repeat(15,1fr);gap:7px;max-width:420px}
+.dots i{aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.16)}
+.dots i.me{background:#fdba74;box-shadow:0 0 0 4px rgba(253,186,116,.3)}
+@media(min-width:720px){.odds{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(min-width:900px){.side{position:sticky;top:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -136,6 +151,10 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
       <div><b>২,৯০,৯৫১ জন</b><p>আবেদন করেছিল ৫০তম বিসিএসে। পোস্ট ছিল মাত্র ২,১৫০টা।</p><small><a href="https://www.prothomalo.com/chakri/chakri-news/d1dxkh6pmb" target="_blank" rel="noopener">পিএসসি (প্রথম আলো)</a> · <a href="https://bangla.bdnews24.com/bangladesh/e72f95b8172c" target="_blank" rel="noopener">বিডিনিউজ২৪</a></small></div>
       <div><b>৮ লাখ ৮৫ হাজার</b><p>গ্র্যাজুয়েট বেকার ছিল ২০২৪ সালে। ২০১৭ সালে ছিল এর অর্ধেকেরও কম।</p><small><a href="https://en.prothomalo.com/youth/employment/snqz3e2d3j" target="_blank" rel="noopener">বিবিএস জরিপ (প্রথম আলো)</a></small></div>
     </div>
+    <div class="odds">
+      <div><h3>৫০তম বিসিএসে প্রতিটা পদের জন্য লড়েছে <em>প্রায় ১৩৫ জন</em></h3><p>এই ১৩৫টা ফোঁটার মধ্যে একটাই চাকরি পায়। এখানে একটা সার্কুলার মিস করা মানে লাইনে দাঁড়ানোর সুযোগটাই হারানো।</p><small style="color:#8fa79b;font-size:13px;display:block;margin-top:8px">২,৯০,৯৫১ আবেদন ÷ ২,১৫০ পদ</small></div>
+      <div class="dots" role="img" aria-label="১৩৫টা ফোঁটার মধ্যে একটা আলাদা রঙের"><i class="me"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
   </div>
 </section>
 
@@ -143,9 +162,9 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
   <div class="wrap">
     <h2>এগুলো চেনা চেনা লাগে?</h2>
     <div class="grid3">
-      <div class="card"><b>"ইশ, কালকেই লাস্ট ডেট ছিল!"</b><p>রাত একটায় ফেসবুক স্ক্রল করছ, হঠাৎ দেখলে ঠিক যে পোস্টটার জন্য বসে ছিলে তার সার্কুলার। খুলে দেখো, লাস্ট ডেট গতকাল।</p></div>
-      <div class="card"><b>"পরে করব, পরে করব…"</b><p>গ্যালারিতে সার্কুলারের স্ক্রিনশট জমতে জমতে পাহাড়। কোনটার ডেট কবে, মনে নেই। এদিকে বয়স তো আর বসে নেই।</p></div>
-      <div class="card"><b>"সিভিটাই তো কেউ পড়ে না"</b><p>একটা পোস্টে পাঁচশো সিভি। এলোমেলো সিভি দুই সেকেন্ডেই বাদ। ইন্টারভিউয়ের ফোনটা আর আসে না।</p></div>
+      <div class="card"><div class="ic r"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c2410c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4M10 13l4 4M14 13l-4 4"/></svg></div><b>"ইশ, কালকেই লাস্ট ডেট ছিল!"</b><p>রাত একটায় ফেসবুক স্ক্রল করছ, হঠাৎ দেখলে ঠিক যে পোস্টটার জন্য বসে ছিলে তার সার্কুলার। খুলে দেখো, লাস্ট ডেট গতকাল।</p></div>
+      <div class="card"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f6b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="14" height="14" rx="2"/><path d="M4 17V5a2 2 0 0 1 2-2h12"/><path d="M10 17l3-3 2 2 3-3"/></svg></div><b>"পরে করব, পরে করব…"</b><p>গ্যালারিতে সার্কুলারের স্ক্রিনশট জমতে জমতে পাহাড়। কোনটার ডেট কবে, মনে নেই। এদিকে বয়স তো আর বসে নেই।</p></div>
+      <div class="card"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f6b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><b>"সিভিটাই তো কেউ পড়ে না"</b><p>একটা পোস্টে পাঁচশো সিভি। এলোমেলো সিভি দুই সেকেন্ডেই বাদ। ইন্টারভিউয়ের ফোনটা আর আসে না।</p></div>
     </div>
     <div style="margin-top:22px"><a class="btn" href="#survey">এই ঝামেলা আর না, সার্ভেটা দিই</a></div>
   </div>
@@ -153,11 +172,22 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
 
 <section class="band" id="survey">
   <div class="wrap survey">
+    <div class="side">
     <div class="why">
       <h3 style="font-size:24px">দুইটা কথা বলি</h3>
       <p style="margin-top:12px">আমরা এমন একটা জিনিস বানাতে চাই, যেটা তোমার পড়াশোনা আর জেলার সাথে মেলে এমন নতুন সার্কুলার এলেই হোয়াটসঅ্যাপে জানিয়ে দেবে, আর লাস্ট ডেটের আগে একবার মনে করিয়ে দেবে। সাথে বাংলায় তথ্য দিলেই একটা গোছানো ইংরেজি সিভি।</p>
       <p style="margin-top:12px">কিন্তু বানানোর আগে তোমাদের মুখ থেকে শুনতে চাই, আসলে কোনটা দরকার। এক মিনিট লাগবে, টাকা-পয়সার কোনো ব্যাপার নেই।</p>
       <p style="margin-top:12px">যারা সার্ভে দেবে, চালু হলে তাদের প্রথম মাস ফ্রি। আর নম্বরটা অন্য কোথাও যাবে না।</p>
+    </div>
+    <div>
+      <div class="phone" aria-label="নমুনা মেসেজ">
+        <div class="chathead"><i>চ</i>চাকরিবন্ধু</div>
+        <div class="msg"><b>নতুন সার্কুলার 🔔</b>চট্টগ্রাম বন্দর কর্তৃপক্ষ, ৩৯৩টা পদ<br><span class="chip">শেষ: ৮ ডিসেম্বর</span><div class="t">সকাল ৯:১২</div></div>
+        <div class="msg"><b>মনে আছে তো? ⏰</b>সিএজি কার্যালয়ের ৩৪৭ পদের আবেদন কাল বিকেল ৪টায় শেষ।<br><span class="chip">আর ১ দিন</span><div class="t">রাত ৮:৩০</div></div>
+        <div class="msg"><b>তোমার ইংরেজি সিভি রেডি ✓</b><div class="file"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 0h14l9 9v18a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3z" fill="#c2410c"/><text x="13" y="22" font-size="8" font-weight="700" fill="#fff" text-anchor="middle" font-family="sans-serif">PDF</text></svg>CV_English.pdf</div><div class="t">রাত ১০:০৫</div></div>
+      </div>
+      <p class="phonecap">নমুনা: চালু হলে এমন মেসেজ আসবে</p>
+    </div>
     </div>
     <form id="f" novalidate>
       <h3 style="font-size:24px">এক মিনিটের সার্ভে</h3>
