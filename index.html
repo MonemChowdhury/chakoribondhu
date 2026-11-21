@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>চাকরিবন্ধু | কোনো সার্কুলার আর মিস হবে না</title>
+<title>চাকরিবন্ধু | ৩২-এর আগে তোমার হাতে কত সময় বাকি?</title>
 <meta name="description" content="তোমার ডিগ্রি আর জেলার সাথে মিলিয়ে সরকারি, ব্যাংক ও প্রাইভেট চাকরির সার্কুলার হোয়াটসঅ্যাপে, ডেডলাইনের আগে রিমাইন্ডার, আর বাংলা থেকে ইংরেজি সিভি। ১ মিনিটের সার্ভে দাও।">
-<meta property="og:title" content="চাকরিবন্ধু: কোনো সার্কুলার আর মিস হবে না">
+<meta property="og:title" content="৩২ পার হলেই সরকারি চাকরির দরজা বন্ধ। তোমার হাতে আর কত দিন?">
 <meta property="og:description" content="তোমার যোগ্যতার সাথে মেলা সার্কুলার হোয়াটসঅ্যাপে, ডেডলাইনের আগে মনে করিয়ে দেওয়া, আর ঝকঝকে ইংরেজি সিভি। ১ মিনিটের ফ্রি সার্ভে।">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap">
@@ -67,6 +67,18 @@ summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:fl
 summary::after{content:"+"}details[open] summary::after{content:"–"}
 details p{color:var(--muted);margin-top:8px}
 footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.clock{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:16px;margin-top:20px;display:grid;gap:12px;box-shadow:0 18px 40px -26px rgba(19,42,31,.4)}
+.pick{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.res{display:none;border-radius:14px;padding:14px 16px;background:#fff4ec;border:1.5px solid #fdba74}
+.res.show{display:block}
+.res .big{font-size:clamp(30px,8vw,42px);font-weight:700;color:var(--red);line-height:1.2}
+.res p{margin-top:6px}
+.res.calm{background:var(--green2);border-color:#9fd3b9}.res.calm .big{color:var(--green)}
+.band.dark{background:var(--ink);color:#fff}
+.stats{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:22px}
+.stats b{display:block;font-size:clamp(34px,6vw,48px);color:#fdba74;line-height:1.15}
+.stats p{color:#dbe7e0;margin-top:4px}.stats small{color:#8fa79b;font-size:13px}
+@media(min-width:720px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:720px){.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:900px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:46px;padding:24px 0 64px}.survey{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -77,10 +89,17 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
   <header class="top"><div class="logo"><i>চ</i>চাকরিবন্ধু</div><a class="btn ghost" href="#survey">সার্ভে দাও</a></header>
   <section class="hero">
     <div>
-      <h1>চাকরির সার্কুলার <span class="u">আর মিস হবে না।</span></h1>
-      <p class="lead">তোমার ডিগ্রি, বয়স আর জেলার সাথে মেলে এমন সরকারি, ব্যাংক আর প্রাইভেট চাকরির খবর সরাসরি হোয়াটসঅ্যাপে। আবেদনের শেষ তারিখের আগে রিমাইন্ডার। আর বাংলায় তথ্য দিলেই গোছানো ইংরেজি সিভি।</p>
-      <div class="ctas"><a class="btn" href="#survey">১ মিনিটের সার্ভে দাও</a></div>
-      <p class="fine" style="margin-top:12px">একদম ফ্রি, কোনো পেমেন্ট নেই। আমরা এখনো বানাচ্ছি। তোমার উত্তর দেখে ঠিক করব কী বানাব।</p>
+      <h1>৩২ পার হলেই সরকারি চাকরির দরজা বন্ধ। <span class="u">তোমার হাতে আর কত দিন?</span></h1>
+      <p class="lead">প্রতিটা মিস হওয়া সার্কুলার মানে একটা সুযোগ চিরদিনের মতো শেষ। জন্মসাল দাও, দেখো তোমার ঘড়িতে কত সময় বাকি।</p>
+      <div class="clock" id="clock">
+        <div class="pick">
+          <label>জন্মসাল<select id="by"></select></label>
+          <label>মাস<select id="bm"></select></label>
+        </div>
+        <button class="btn" type="button" id="calc">আমার সময় দেখাও</button>
+        <div class="res" id="res" aria-live="polite"></div>
+      </div>
+      <p class="fine" style="margin-top:10px">বিসিএসসহ সরকারি চাকরিতে প্রবেশের সর্বোচ্চ বয়স ৩২ (সংসদে পাস, এপ্রিল ২০২৬)। চিকিৎসক, প্রতিবন্ধী ও কিছু বাহিনীর নিয়ম আলাদা। বয়স গোনা হয় প্রতিটা সার্কুলারে দেওয়া তারিখ অনুযায়ী, তাই এটা আনুমানিক হিসাব।</p>
     </div>
     <div>
       <div class="phone" aria-label="হোয়াটসঅ্যাপ অ্যালার্টের নমুনা">
@@ -93,14 +112,26 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
   </section>
 </div>
 
+<section class="band dark">
+  <div class="wrap">
+    <h2>প্রতিযোগিতা কতটা কঠিন, সংখ্যায় দেখো</h2>
+    <div class="stats">
+      <div><b>৫১৩ জন</b><p>প্রাইভেট চাকরিতে গড়ে প্রতিটা পদে এতজন আবেদন করছে</p><small>বিডিজবস, জানুয়ারি–জুন ২০২৬ (প্রথম আলো)</small></div>
+      <div><b>২,৯০,০০০+</b><p>প্রার্থী ৫০তম বিসিএসে, পদ মাত্র ২,১৫০টি</p><small>দ্য ফিন্যান্সিয়াল এক্সপ্রেস, মে ২০২৬</small></div>
+      <div><b>প্রায় ৯ লাখ</b><p>স্নাতক এখনো বেকার, জাতীয় হারের প্রায় তিন গুণ</p><small>বিবিএস শ্রমশক্তি জরিপ (দ্য ডেইলি স্টার)</small></div>
+    </div>
+  </div>
+</section>
+
 <section class="band alt">
   <div class="wrap">
-    <h2>চাকরি খোঁজা কেন এত কঠিন?</h2>
+    <h2>এগুলো কি তোমার সাথেও হয়?</h2>
     <div class="grid3">
-      <div class="card"><b>সার্কুলার ছড়িয়ে-ছিটিয়ে</b><p>পত্রিকা, ওয়েবসাইট, ফেসবুক পেজ। রোজ সব দেখা সম্ভব না, আর ভালো সার্কুলারটাই চোখ এড়িয়ে যায়।</p></div>
-      <div class="card"><b>ডেডলাইন পার হয়ে যায়</b><p>"পরে করব" ভেবে রেখে দিলে, পরে দেখি আবেদনের তারিখ শেষ।</p></div>
-      <div class="card"><b>একটা পদে শত শত আবেদন</b><p>প্রাইভেট চাকরিতে সিভি দেখেই বাদ। ইংরেজিতে গোছানো সিভি না থাকলে ইন্টারভিউ ডাকই আসে না।</p></div>
+      <div class="card"><b>"কালই তো শেষ তারিখ ছিল"</b><p>রাতে ফেসবুক স্ক্রল করতে করতে চোখে পড়ল ঠিক যে সার্কুলারটা খুঁজছিলে। আবেদনের শেষ দিন ছিল গতকাল।</p></div>
+      <div class="card"><b>"পরে করব" আর হয় না</b><p>সার্কুলারের স্ক্রিনশট গ্যালারিতে জমছে। একটা একটা করে ডেডলাইন পার হচ্ছে, আর বয়সও থেমে নেই।</p></div>
+      <div class="card"><b>সিভি দেখেই বাদ</b><p>৫০০ জনের ভিড়ে এলোমেলো সিভি কেউ পুরোটা পড়ে না। ইন্টারভিউয়ের ডাকটাই আসে না।</p></div>
     </div>
+    <div style="margin-top:22px"><a class="btn" href="#survey">আর মিস করতে চাই না → সার্ভে দাও</a></div>
   </div>
 </section>
 
@@ -140,6 +171,7 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
         <label><input type="radio" name="price" value="200+"> ২০০ টাকা বা বেশি</label></div></fieldset>
       <label>তোমার জেলা (ইচ্ছা হলে)<input name="district" placeholder="যেমন: সিলেট"></label>
       <input type="hidden" name="source" value="">
+      <input type="hidden" name="birthyear" value="">
       <p class="err" id="err" role="alert"></p>
       <button class="btn" type="submit" id="go">সার্ভে জমা দাও</button>
       <div class="done" id="done"><b>ধন্যবাদ! ✓</b><p>তোমার উত্তর জমা হয়েছে। সার্ভিস চালু হলে সবার আগে তোমাকে জানাব।</p></div>
@@ -166,6 +198,26 @@ const FORM_ENDPOINT = "";
 const META_PIXEL_ID = "";   // optional: your Meta Pixel ID
 // =====================================================================================
 const f=document.getElementById('f'), err=document.getElementById('err');
+// ---- age clock (government job entry limit: 32) ----
+const LIMIT=32, bn=s=>String(s).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+const MON=['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+const by=document.getElementById('by'), bm=document.getElementById('bm'), res=document.getElementById('res'), now=new Date();
+by.innerHTML='<option value="">বছর</option>'+Array.from({length:30},(_,i)=>now.getFullYear()-16-i).map(y=>`<option value="${y}">${bn(y)}</option>`).join('');
+bm.innerHTML=MON.map((m,i)=>`<option value="${i}">${m}</option>`).join('');
+document.getElementById('calc').onclick=()=>{
+  if(!by.value){ by.focus(); return; }
+  const y=+by.value, m=+bm.value; f.birthyear.value=y+'-'+(m+1);
+  const left=(y+LIMIT)*12+m-(now.getFullYear()*12+now.getMonth());
+  res.className='res show';
+  if(left>0){
+    const yy=Math.floor(left/12), mm=left%12;
+    res.innerHTML=`<div class="big">${yy?bn(yy)+' বছর ':''}${mm?bn(mm)+' মাস':''}</div><p>সরকারি চাকরিতে আবেদনের জন্য তোমার হাতে মোটামুটি এতটুকু সময় বাকি। এর মধ্যে যতগুলো সার্কুলার মিস হবে, সেগুলো আর ফিরে আসবে না।</p><a class="btn" style="margin-top:12px" href="#survey">একটাও যেন মিস না হয় → সার্ভে দাও</a>`;
+    if(left<=24) res.querySelector('p').insertAdjacentHTML('afterbegin','<b>সময় খুব কম। </b>');
+  } else {
+    res.className='res show calm';
+    res.innerHTML=`<div class="big">থেমে যেও না</div><p>সাধারণ সরকারি চাকরির বয়সসীমা হয়তো পার হয়েছে, কিন্তু প্রাইভেট কোম্পানি, ব্যাংক, এনজিও আর বিদেশে এখনো অনেক সুযোগ আছে। সেগুলো যেন মিস না হয়।</p><a class="btn" style="margin-top:12px" href="#survey">সার্ভে দাও</a>`;
+  }
+};
 const q=new URLSearchParams(location.search);
 f.source.value=[q.get('utm_source'),q.get('utm_campaign'),q.get('utm_content')].filter(Boolean).join(' / ')||document.referrer||'direct';
 if(META_PIXEL_ID){ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init',META_PIXEL_ID); fbq('track','PageView'); }
