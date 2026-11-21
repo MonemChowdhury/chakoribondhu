@@ -102,7 +102,7 @@ function setup() {
       exact ? `=COUNTIF(Responses!${col}2:${col},"${l}")` : `=COUNTIF(Responses!${col}2:${col},"*${l}*")`]));
     rows.push(['', '']);
   };
-  block('Would pay / month', 'G', LABELS.price, true);
+  block('Would pay / month', 'G', ['Free only', 'Tk 30', 'Tk 50', 'Tk 100', 'Tk 200+'], true);
   block('Biggest problem', 'E', LABELS.pain, true);
   block('Wants', 'F', LABELS.want, false);
   block('Looking for', 'D', LABELS.jobtype, false);
