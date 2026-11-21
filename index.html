@@ -235,7 +235,7 @@ function drawJobs(){
     return `<li class="${cls}"><a href="${j.u}" target="_blank" rel="noopener">${j.o}</a><span class="meta">${bnum(j.p.toLocaleString('en-IN'))} পদ · শেষ ${fmtD(j.d)}</span><span class="left">${left}</span></li>`;
   }).join('');
   const gone=rows.filter(j=>j.ms<=0).reduce((a,j)=>a+j.p,0);
-  document.getElementById('sum').textContent = soon ? `আগামী ১০ দিনে ${bnum(soon.toLocaleString('en-IN'))}টি পদের আবেদন বন্ধ হয়ে যাচ্ছে।` + (gone?` গত সপ্তাহেই শেষ হয়ে গেছে আরও ${bnum(gone)}টি পদের আবেদন।`:'') : 'নতুন সার্কুলারের তালিকা শিগগিরই হালনাগাদ হবে।';
+  document.getElementById('sum').textContent = soon ? `আগামী ১০ দিনে ${bnum(soon.toLocaleString('en-IN'))}টি পদের আবেদন বন্ধ হয়ে যাচ্ছে।` + (gone?` মাত্র কদিন আগে শেষ হয়ে গেছে আরও ${bnum(gone)}টি পদের আবেদন।`:'') : 'নতুন সার্কুলারের তালিকা শিগগিরই হালনাগাদ হবে।';
 }
 drawJobs(); setInterval(drawJobs,1000);
 // ---- age clock (government job entry limit: 32) ----
