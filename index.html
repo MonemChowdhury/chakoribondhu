@@ -176,8 +176,9 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
     <div class="why">
       <h3 style="font-size:24px">দুইটা কথা বলি</h3>
       <p style="margin-top:12px">আমরা এমন একটা জিনিস বানাতে চাই, যেটা তোমার পড়াশোনা আর জেলার সাথে মেলে এমন নতুন সার্কুলার এলেই হোয়াটসঅ্যাপে জানিয়ে দেবে, আর লাস্ট ডেটের আগে একবার মনে করিয়ে দেবে। সাথে বাংলায় তথ্য দিলেই একটা গোছানো ইংরেজি সিভি।</p>
-      <p style="margin-top:12px">কিন্তু বানানোর আগে তোমাদের মুখ থেকে শুনতে চাই, আসলে কোনটা দরকার। এক মিনিট লাগবে, টাকা-পয়সার কোনো ব্যাপার নেই।</p>
-      <p style="margin-top:12px">যারা সার্ভে দেবে, চালু হলে তাদের প্রথম মাস ফ্রি। আর নম্বরটা অন্য কোথাও যাবে না।</p>
+      <p style="margin-top:12px"><b>আমাদের উদ্দেশ্যটা সোজা:</b> অনেক চাকরিতে শুধু আবেদনের ফি-ই ৫০০-৭০০ টাকা। ভুল সার্কুলারে টাকা নষ্ট না হোক, আর ঠিক সার্কুলারটা যেন ডেট পার হয়ে না যায়। তুমি শুধু প্রস্তুতিতে মন দাও, খোঁজাখুঁজির কাজটা আমরা করি।</p>
+      <p style="margin-top:12px">আমাদের ইচ্ছা, তোমার যোগ্যতার সার্কুলারের খবর সবার জন্য ফ্রি রাখা। বাড়তি কিছু কাজ, যেমন আবেদনের আগে যোগ্যতা যাচাই আর সিভি বানানো, এগুলোর জন্য হয়তো অল্প টাকা লাগবে। কত টাকা, সেটা তোমাদের উত্তর দেখেই ঠিক করব।</p>
+      <p style="margin-top:12px">সার্ভে দিতে টাকা লাগবে না, এক মিনিট লাগবে। যারা সার্ভে দেবে, চালু হলে তাদের প্রথম মাস ফ্রি। আর নম্বরটা অন্য কোথাও যাবে না।</p>
     </div>
     <div>
       <div class="phone" aria-label="নমুনা মেসেজ">
@@ -210,13 +211,30 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
         <label><input type="checkbox" name="want" value="reminders"> লাস্ট ডেটের আগে রিমাইন্ডার</label>
         <label><input type="checkbox" name="want" value="english-cv"> বাংলায় বললে ইংরেজি সিভি বানিয়ে দেওয়া</label>
         <label><input type="checkbox" name="want" value="cover-letter"> প্রতিটা চাকরির জন্য আলাদা কভার লেটার</label>
-        <label><input type="checkbox" name="want" value="interview-practice"> ইন্টারভিউর প্র্যাকটিস</label></div></fieldset>
-      <fieldset><legend>সত্যি করে বলো, এমন সার্ভিসের জন্য মাসে কত দিতে পারবে?</legend><div class="opts">
-        <label><input type="radio" name="price" value="free-only"> ফ্রি না হলে নেব না</label>
-        <label><input type="radio" name="price" value="30"> ৩০ টাকা</label>
-        <label><input type="radio" name="price" value="50"> ৫০ টাকা</label>
-        <label><input type="radio" name="price" value="100"> ১০০ টাকা</label>
-        <label><input type="radio" name="price" value="200+"> ২০০ টাকা বা বেশি</label></div></fieldset>
+        <label><input type="checkbox" name="want" value="interview-practice"> ইন্টারভিউর প্র্যাকটিস</label>
+        <label><input type="checkbox" name="want" value="after-apply"> আবেদনের পরের ধাপ (ফি জমা, প্রবেশপত্র, পরীক্ষা) মনে করিয়ে দেওয়া</label></div></fieldset>
+      <fieldset><legend>চাকরির জন্য আগে কখনো কোনো কিছুতে টাকা দিয়েছ? (যতগুলো প্রযোজ্য)</legend><div class="opts">
+        <label><input type="checkbox" name="paidbefore" value="coaching"> কোচিং (বিসিএস, ব্যাংক বা অন্য)</label>
+        <label><input type="checkbox" name="paidbefore" value="prep-app"> প্রস্তুতির অ্যাপ বা অনলাইন কোর্স</label>
+        <label><input type="checkbox" name="paidbefore" value="job-site"> চাকরির সাইটের পেইড প্ল্যান</label>
+        <label><input type="checkbox" name="paidbefore" value="cv-service"> সিভি বানাতে কাউকে টাকা দিয়েছি</label>
+        <label><input type="checkbox" name="paidbefore" value="never"> না, কখনো দিইনি</label></div></fieldset>
+      <fieldset><legend>নিচের কোনগুলোর জন্য টাকা দিতে রাজি আছ? (যতগুলো ইচ্ছা)</legend><div class="opts">
+        <label><input type="checkbox" name="paywant" value="eligibility"> ফি দেওয়ার আগে যাচাই করে দেওয়া, আমি এই চাকরিতে আবেদন করতে পারব কিনা</label>
+        <label><input type="checkbox" name="paywant" value="reminders"> ডেডলাইন, ফি জমা, প্রবেশপত্র আর পরীক্ষার রিমাইন্ডার</label>
+        <label><input type="checkbox" name="paywant" value="cv"> একবার একটা ভালো ইংরেজি সিভি</label>
+        <label><input type="checkbox" name="paywant" value="cover-letter"> প্রতিটা চাকরির জন্য আলাদা কভার লেটার</label>
+        <label><input type="checkbox" name="paywant" value="none"> কোনোটার জন্যই না, শুধু ফ্রি হলে নেব</label></div></fieldset>
+      <div class="plans" style="border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg)">
+        <p><b>ফ্রি প্ল্যান:</b> তোমার যোগ্যতার সার্কুলারের খবর, সপ্তাহে একবার।</p>
+        <p style="margin-top:8px"><b>পেইড প্ল্যান:</b> প্রতিদিনের সার্কুলার, ফি দেওয়ার আগে যোগ্যতা যাচাই, ডেডলাইন-ফি-প্রবেশপত্র-পরীক্ষার রিমাইন্ডার, ইংরেজি সিভি আর প্রতিটা চাকরির কভার লেটার।</p>
+        <p style="margin-top:8px;color:var(--muted)">মনে রেখো, ভুল চাকরিতে একটা আবেদনের ফি-ই ৫০০-৭০০ টাকা নষ্ট হতে পারে।</p>
+      </div>
+      <fieldset><legend>চালু হলে কোন প্ল্যানটা নেবে? সত্যি করে বলো</legend><div class="opts">
+        <label><input type="radio" name="price" value="free-only"> ফ্রি প্ল্যানই যথেষ্ট, টাকা দেব না</label>
+        <label><input type="radio" name="price" value="99-1m"> মাসে ৯৯ টাকা</label>
+        <label><input type="radio" name="price" value="249-3m"> ৩ মাস একসাথে ২৪৯ টাকা (মাসে ৮৩ টাকা পড়ে)</label>
+        <label><input type="radio" name="price" value="449-6m"> ৬ মাস একসাথে ৪৪৯ টাকা (মাসে ৭৫ টাকা পড়ে)</label></div></fieldset>
       <label>কোন জেলায় থাকো? (না বললেও চলবে)<input name="district" placeholder="যেমন: সিলেট"></label>
       <input type="hidden" name="source" value="">
       <input type="hidden" name="birthyear" value="">
@@ -230,7 +248,7 @@ footer{padding:28px 0 46px;color:var(--muted);font-size:14px;border-top:1px soli
 <section class="band alt">
   <div class="wrap" style="max-width:800px">
     <h2>কিছু প্রশ্ন মাথায় আসতে পারে</h2>
-    <details><summary>টাকা লাগবে?</summary><p>না, এক টাকাও না। দামের প্রশ্নটা রেখেছি যাতে পরে এমন দাম ঠিক করতে পারি, যেটা সবার সাধ্যের মধ্যে থাকে।</p></details>
+    <details><summary>টাকা লাগবে?</summary><p>সার্ভে দিতে এক টাকাও লাগবে না। চালু হলে আমাদের ইচ্ছা সার্কুলারের খবর ফ্রি রাখা। বাড়তি কাজগুলোর (যোগ্যতা যাচাই, সিভি, কভার লেটার) জন্য অল্প টাকা লাগতে পারে। দামের প্রশ্নগুলো রেখেছি যাতে এমন দাম ঠিক করতে পারি, যেটা সবার সাধ্যের মধ্যে থাকে।</p></details>
     <details><summary>তোমরা কি চাকরি দাও?</summary><p>না, আমরা চাকরি দিই না, কাউকে চাকরির গ্যারান্টিও দিই না। কাজটা শুধু এটুকু: পত্রিকা আর অফিসিয়াল সাইটে যে সার্কুলারগুলো আসে, সেগুলো তোমার যোগ্যতার সাথে মিলিয়ে সময়মতো জানানো, আর আবেদনটা গুছিয়ে দিতে সাহায্য করা।</p></details>
     <details><summary>সার্কুলারের তথ্য ঠিক থাকবে তো?</summary><p>পত্রিকায় ছাপা খবর আর অফিসিয়াল বিজ্ঞপ্তি মিলিয়ে তবেই পাঠাব। প্রতিটা মেসেজে আসল লিংক থাকবে, চাইলে নিজে একবার দেখে নিতে পারবে।</p></details>
     <details><summary>নম্বর দিলে কি উল্টাপাল্টা মেসেজ আসবে?</summary><p>না। নম্বরটা কাউকে দেব না, বিক্রিও করব না। শুধু এই সার্ভিসের খবর জানাতেই ব্যবহার হবে।</p></details>
@@ -296,7 +314,7 @@ const q=new URLSearchParams(location.search);
 f.source.value=[q.get('utm_source'),q.get('utm_campaign'),q.get('utm_content')].filter(Boolean).join(' / ')||document.referrer||'direct';
 if(META_PIXEL_ID){ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init',META_PIXEL_ID); fbq('track','PageView'); }
 f.addEventListener('submit',async e=>{ e.preventDefault(); err.textContent='';
-  const fd=new FormData(f), data=Object.fromEntries(fd); data.jobtype=fd.getAll('jobtype').join(', '); data.want=fd.getAll('want').join(', '); data.page='chakribondhu'; data.time=new Date().toISOString();
+  const fd=new FormData(f), data=Object.fromEntries(fd); data.jobtype=fd.getAll('jobtype').join(', '); data.want=fd.getAll('want').join(', '); data.paidbefore=fd.getAll('paidbefore').join(', '); data.paywant=fd.getAll('paywant').join(', '); data.page='chakribondhu'; data.time=new Date().toISOString();
   const c=(data.contact||'').trim();
   if(!/^(\+?88)?01[3-9]\d{8}$/.test(c.replace(/[\s-]/g,'')) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c)){ err.textContent='নম্বরটা ঠিক আছে তো? 01 দিয়ে ১১ ডিজিট, নাহলে একটা ইমেইল দাও।'; f.contact.focus(); return; }
   if(!FORM_ENDPOINT){ err.textContent='সার্ভেটা এখনো চালু হয়নি, একটু পরে আবার চেষ্টা করো।'; return; }
